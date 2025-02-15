@@ -2,7 +2,6 @@
 import AcmeLogo from "@/app/ui/acme-logo";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import styles from "@/app/ui/home.module.css";
 import Image from "next/image";
 import { lusitana } from "./ui/fonts";
 import clsx from "clsx";
@@ -18,7 +17,7 @@ export default function Page() {
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-3/5 md:px-20">
-        <p
+          <p
             className={`text-xl text-gray-800 md:text-3xl md:leading-normal ${lusitana.className}`}
           >
             <strong>Welcome to Acme.</strong> This is the example for the{" "}
@@ -44,11 +43,11 @@ export default function Page() {
             className="hidden md:block"
           />
           <Image
-          src="/hero-mobile.png"
-          alt="Screenshot of the dashboard project showing phone version"
-          width={560}
-          className="block md:hidden"
-          height={620}
+            src="/hero-mobile.png"
+            alt="Screenshot of the dashboard project showing phone version"
+            width={560}
+            className="block md:hidden"
+            height={620}
           />
         </div>
       </div>
