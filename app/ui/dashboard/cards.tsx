@@ -7,12 +7,7 @@ import {
 import { lusitana } from "@/app/ui/fonts";
 import { fetchCardData } from "@/app/lib/data";
 import { Suspense } from "react";
-
-import {
-  RevenueChartSkeleton,
-  LatestInvoicesSkeleton,
-  CardSkeleton,
-} from "@/app/ui/skeletons";
+import { CardSkeleton } from "@/app/ui/skeletons";
 
 const iconMap = {
   collected: BanknotesIcon,
@@ -35,7 +30,7 @@ export default async function CardWrapper() {
 
       <Suspense fallback={<CardSkeleton />}>
         <Card title="Collected" value={totalPaidInvoices} type="collected" />
-      </Suspense >
+      </Suspense>
       <Suspense fallback={<CardSkeleton />}>
         <Card title="Pending" value={totalPendingInvoices} type="pending" />
       </Suspense>
